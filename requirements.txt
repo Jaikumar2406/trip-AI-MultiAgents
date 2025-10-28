@@ -1,0 +1,35 @@
+# --- Core Framework ---
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# --- LangChain / LangGraph / Groq ---
+langchain
+langchain-core
+langgraph
+langchain-groq
+
+# --- Utilities & Tools ---
+duckduckgo-search
+requests
+httpx
+
+# --- Voice (Text to Speech) ---
+elevenlabs
+
+# --- Optional Helpers ---
+typing_extensions
+tqdm
+
+# --- Error Handling / Debug ---
+traceback2
+
+# --- For Deployment (Render) ---
+gunicorn
+
+# --- For JSON Encoding / Decoding ---
+orjson
+
+# --- Data Handling ---
+numpy

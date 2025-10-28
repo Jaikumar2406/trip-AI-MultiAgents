@@ -76,7 +76,7 @@ function App() {
 
     try {
       const response = await fetch(
-        import.meta.env.VITE_API_ENDPOINT || "http://127.0.0.1:8000/chat",
+        import.meta.env.VITE_API_ENDPOINT || "https://trip-ai-multiagents-1.onrender.com/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

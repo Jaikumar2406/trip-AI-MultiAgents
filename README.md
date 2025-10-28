@@ -1,59 +1,95 @@
-# 🧠 Multi-AI Travel Assistant (7-Agent System)
+# 🌍 AI Travel Assistant Agent  
 
-An intelligent multi-agent travel planning assistant built using the **ReAct framework** and **DuckDuckGoSearchResults**, capable of interacting with users in a conversational way to plan detailed trips.
-
----
-
-## 🚀 Features
-
-This project includes **7 specialized AI agents**, each responsible for a core aspect of travel planning:
-
-1. **✈️ Flight Search Agent**  
-   Finds flights between two locations with details like departure time, arrival time, duration, and pricing.
-
-2. **🚌 Bus Search Agent**  
-   Searches for buses available on a given route, along with timing, fare, and travel duration.
-
-3. **🚆 Train Search Agent**  
-   Looks up trains between cities, including class, timing, fare, and estimated duration.
-
-4. **🏨 Hotel Search Agent**  
-   Recommends low-budget, mid-range, and luxury hotel options with price, features, and location.
-
-5. **🍽️ Famous Food Search Agent**  
-   Suggests local popular foods and dishes from the destination city, including vegetarian/non-vegetarian options and pricing.
-
-6. **🗺️ Tourist Place Search Agent**  
-   Lists famous tourist attractions in the destination, their significance, popularity, and best times to visit.
-
-7. **📍 Location Describer Agent**  
-   Provides a short, beautiful description of any place mentioned by the user to help them visualize the location.
+An **AI-powered travel assistant** that helps users discover **hotels, flights, buses, trains, famous foods, and tourist places** — all through a single intelligent chat interface.  
+The system fetches live information using **DuckDuckGo Search**, speaks results aloud using **Eleven Labs Text-to-Speech (TTS)**, and is built with a **Node.js frontend** and **FastAPI backend**.  
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Features  
 
-- **Framework**: ReAct (Reason + Act agent-based approach)  
-- **Search Tool**: DuckDuckGo Search API (via `DuckDuckGoSearchResults`)  
-- **Language**: Python  
-- **Interface**: Conversational (chat-based interaction)
-
----
-
-## 💬 How It Works
-
-1. The user interacts in natural language (e.g., “I want to go to Manali”).
-2. The system uses the **Location Describer Agent** to describe Manali.
-3. It then asks for the starting point and queries respective agents like Flight, Bus, or Train Search.
-4. Each agent uses **DuckDuckGoSearchResults** to fetch the most accurate and recent info.
-5. Agents collaborate step-by-step using ReAct to recommend transport, hotels, food, and tourist places.
-6. After collecting all info, the system can generate a final **itinerary summary**.
+✅ Real-time travel info (Hotels, Flights, Trains, Buses, Food, Places)  
+✅ DuckDuckGo-based intelligent search  
+✅ Eleven Labs TTS for natural voice responses  
+✅ Single chat endpoint for simplicity  
+✅ Modular architecture — Node.js frontend + FastAPI backend  
+✅ Text + Speech output  
 
 ---
 
-## 📦 Installation
+## 🏗️ Tech Stack  
 
-```bash
-git clone https://github.com/jaikumar2406/multi-ai-travel-assistant.git
-cd multi-ai-travel-assistant
+**Frontend:**  
+- Node.js  
+- HTML / CSS / JavaScript  
+- Axios  
+
+**Backend:**  
+- FastAPI (Python)  
+- DuckDuckGo Search integration  
+- Eleven Labs Text-to-Speech API  
+
+---
+
+## ⚙️ How It Works  
+
+1. User types a question like **“Best hotels in Manali”**  
+2. Backend calls **DuckDuckGo Search** to fetch relevant info  
+3. Response text is generated and converted to **speech** using Eleven Labs  
+4. Frontend displays text and plays audio  
+
+---
+
+## 🧩 API Endpoint  
+
+| Method | Endpoint | Description |
+|:-------|:----------|:------------|
+| `POST` | `/chat` | Takes user query → returns AI-generated text and speech response |
+
+**Example Request:**
+```json
+POST /chat
+{
+  "query": "Tell me famous foods in Delhi"
+}
+```
+
+## Example Response:
+```
+{
+  "text": "Here are some famous foods in Delhi: Chole Bhature, Paranthe, and Butter Chicken.",
+  "audio_url": "https://elevenlabs-generated-link.mp3"
+}
+```
+## 🖥️ Installation
+** 1️⃣ Clone the Repository**
+```
+git clone https://github.com/Jaikumar2406/trip-AI-MultiAgents.git
+cd ai-travel-assistant
+```
+** 2️⃣ Setup Backend (FastAPI) **
+```
 pip install -r requirements.txt
+uvicorn main:app --reload
+```
+** Setup Frontend (Node.js) ** 
+```
+cd frontend
+npm install
+npm run dev
+```
+## 💡 Future Enhancements
+```
+- 🌐 Add multilingual speech
+
+- 🧭 Google Maps integration
+
+- 🏨 Live flight/hotel booking API
+
+- 📱 Mobile app version
+
+```
+<img width="1919" height="1027" alt="Screenshot 2025-10-28 140336" src="https://github.com/user-attachments/assets/cef7e468-2d4b-49eb-9fa6-b7181d4bf20f" />
+
+
+
+<img width="1913" height="1016" alt="Screenshot 2025-10-28 140512" src="https://github.com/user-attachments/assets/04dddbcb-d8a0-4bf3-a1b4-707fd7bf9154" />

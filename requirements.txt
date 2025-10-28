@@ -3,6 +3,7 @@ fastapi
 uvicorn
 pydantic
 python-dotenv
+pygame
 
 # --- LangChain / LangGraph / Groq ---
 langchain

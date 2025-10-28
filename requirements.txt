@@ -7,6 +7,7 @@ python-dotenv
 # --- LangChain / LangGraph / Groq ---
 langchain
 langchain-core
+langchain_community
 langgraph
 langchain-groq
 

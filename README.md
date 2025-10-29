@@ -93,3 +93,12 @@ npm run dev
 
 
 <img width="1913" height="1016" alt="Screenshot 2025-10-28 140512" src="https://github.com/user-attachments/assets/04dddbcb-d8a0-4bf3-a1b4-707fd7bf9154" />
+
+## 🚀 Live Demo
+
+### 🌐 Frontend
+[https://trip-ai-multi-agents-9htc.vercel.app/](https://trip-ai-multi-agents-9htc.vercel.app/)
+
+### ⚙️ Backend
+[https://trip-ai-multiagents-1.onrender.com/](https://trip-ai-multiagents-1.onrender.com/)
+
